@@ -4,6 +4,8 @@
 
 Every day has its own folder with the same structure **one script** for solution programming and **two data files** (one for tests and other for real input)
 ---
+Tasks can be found via https://adventofcode.com/2022/day/<number of day>
+---
 In my case it is the goal to test development on my android smartphone with
 - **[F-Droid](https://f-droid.org)**
 - **[termux](https://termux.dev/en/)**
