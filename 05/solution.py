@@ -9,6 +9,7 @@ sys.path.append(parent)
 
 from aoc_utils import timer_func, logging_func
 
+@timer_func
 def parse_state(state: list):
     state_stack = []
     # get the number of stacks
@@ -57,12 +58,6 @@ def execute_command_9001(state_stack: list, command: str):
     for letter in letters:
         state_stack[int(goal_stack)-1].append(letter)
     return state_stack
-
-
-
-
-
-        
 
 
 
