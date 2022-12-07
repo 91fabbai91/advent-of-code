@@ -6,15 +6,14 @@ parent = os.path.dirname(current)
 sys.path.append(parent)
 
 from aoc_utils import timer_func, logging_func
-#for task 1 MARKER_OFFSET=4 for task 2 MARKER_OFFSET = 14_
-MARKER_OFFSET = 4
+
 
 @timer_func
-def find_four_different_letters(line: str):
-    for i in range(MARKER_OFFSET,len(line),1):
+def find_four_different_letters(line: str, marker_offset):
+    for i in range(marker_offset,len(line),1):
         different_letters = set()
-        different_letters.update(line[i-MARKER_OFFSET:i])
-        if len(different_letters) == MARKER_OFFSET:
+        different_letters.update(line[i-marker_offset:i])
+        if len(different_letters) == marker_offset:
             return i
 
 if __name__ == "__main__":
@@ -22,4 +21,4 @@ if __name__ == "__main__":
         lines = file.readlines()
         for line in lines:
             line.rstrip()
-            print(find_four_different_letters(line))
+            print(find_four_different_letters(line,14))
